@@ -1,0 +1,33 @@
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 250px;
+    grid-template-rows: 40px 400px 40px;
+}
+
+header,
+main,
+footer {
+    border: 3px solid red;
+    padding: 5px 10px;
+}
+
+header {
+    grid-area: header;
+    
+}
+
+main {
+    grid-area: main;
+
+}
+
+footer {
+    grid-area: footer;
+
+}
+
