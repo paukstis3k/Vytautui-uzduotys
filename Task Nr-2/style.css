@@ -1,0 +1,13 @@
+.layout {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 150px;
+    grid-template-areas:
+    "article article" ;
+    gap: 20px;
+}
+
+article {
+    border: 3px solid red;
+    grid-row: span 12;
+}
