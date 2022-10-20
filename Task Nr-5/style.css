@@ -1,0 +1,10 @@
+article {
+    display: grid;
+    grid
+}
+
+div {
+    border: 3px solid red;
+    height: 100px;
+    width: 150px;
+}
