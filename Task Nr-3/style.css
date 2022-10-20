@@ -1,0 +1,112 @@
+body {
+    font-family: serif;
+}
+
+.layout {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 300px;
+    grid-template-rows: 40px 40px 250px repeat(3, 40px);
+}
+
+h1 {
+    font-weight: 500;
+}
+
+.tablet,
+.desktop {
+    display: none;
+}
+
+header,
+nav,
+main,
+aside,
+footer,
+.ads {
+    border: 3px solid red;
+    text-transform: capitalize;
+    padding: 6px 6px;
+}
+
+
+@media screen and (min-width:768px) {
+    .layout {
+        grid-template-columns: 100px auto;
+        grid-template-areas: 
+        "header header"
+        "navigation navigation"
+        "aside main";
+        width: 900px;
+    }
+
+    .mobile,
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: navigation;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    main {
+        grid-area: main;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 200px auto 200px;
+        grid-template-areas: 
+        "header header header"
+        "aside navigation ads"
+        "aside main ads"
+        "footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: navigation;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    .ads {
+        grid-area: ads;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .tablet,
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+    
+}
